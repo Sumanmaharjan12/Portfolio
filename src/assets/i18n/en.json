@@ -1,0 +1,172 @@
+{
+    "Header.Item1": "About me",
+    "Header.Item2": "Experience",
+    "Header.Item3": "Projects",
+    "Header.Item4": "Contact",
+    "Header.cvBtn": "Resume",
+    "Header.cvName": "suman.pdf",
+    "Banner.Pretitle": "Hello! My name is",
+"Banner.Description": "I am a <span class='underline'>UI/UX Designer</span> with <span class='underline'>1 year of experience</span> in designing <span class='underline'>user-friendly, responsive, and visually appealing</span> web and mobile interfaces. I have worked on diverse projects including <span class='underline'>educational websites</span> and <span class='underline'>company websites</span> using <span class='underline'>Figma</span>. My designs focus on <span class='underline'>enhancing user experience</span>, ensuring <span class='underline'>mobile-first responsiveness</span>, and building interfaces that align with <span class='underline'>business goals</span>. I specialize in creating <span class='underline'>interactive prototypes</span>, <span class='underline'>wireframes</span>, and <span class='underline'>high-fidelity mockups</span> to deliver intuitive, modern design solutions.",
+    "Banner.ActionBtn": "Get in touch",
+    "AboutMe.Title": "About me",
+"AboutMe.Paragraphs": [
+   "Coming from a <span class='underline'>Bachelor's in Computer Applications (BCA)</span> background, I discovered my true interest in crafting <span class='underline'>user-friendly and visually engaging digital experiences</span>. Given my strong skill for <span class='underline'>design and problem-solving</span>, I choose to specialize in <span class='underline'>UI/UX design</span>. Since then, I've been committed to developing <span class='underline'>user-friendly interfaces</span> that improve <span class='underline'>user experiences</span> on <span class='underline'>mobile and web platforms</span>.",
+
+    "Over the past year, I've developed practical experience with <span class='underline'>Figma</span> to create <span class='underline'>accessible and responsive designs</span>. My work has included <span class='underline'>corporate portfolios</span>, <span class='underline'>e-commerce platforms</span>, and <span class='underline'>websites for educational consulting</span>. I have concentrated on improving <span class='underline'>usability</span>, ensuring <span class='underline'>mobile-first responsiveness</span>, and translating business needs into practical, intuitive design solutions."
+],
+    "Experience.Title": "Experience",
+    "Experience.Jobs": [
+        {
+            "Tab": "Saral Apps",
+            "Title": "UI/UX Designer ",
+            "Date": "January 2021 - present",
+            "Description": [
+                "Collaborated with developers to understand project requirements and translate user needs into effective design solutions.",
+                "Created wireframes, prototypes, and user flows using Figma to support both web and mobile application development.",
+                "Designed responsive and user-friendly interfaces for landing pages, dashboards, and client websites, ensuring a seamless experience across devices.",
+                "Assisted in transforming complex requirements into clean, accessible, and intuitive visual designs.",
+                "Participated in team and client meetings to gather feedback, refine design concepts, and align with project goals.",
+                "Ensured visual design consistency, accessibility, and mobile responsiveness across all projects."
+            ]
+        },        
+        {
+            "Tab": "Aide Ascent",
+            "Title": "UI/UX Intern",
+            "Date": "March 2020 - September 2020 (6 months)",
+            "Description": [
+                "Collaborated with senior designers and developers to understand project requirements and user needs.",
+                "Created wireframes, prototypes, and user flows using Figma to support web and mobile application development.",
+                "Designed responsive and user-friendly interfaces for landing pages, and client websites.",
+                "Assisted in translating complex ideas into clean, accessible, and intuitive designs.",
+                "Participated in  meetings to gather feedback and refine design solutions based on project goals.",
+                "Ensured design consistency, mobile responsiveness",
+                "Worked alongside the development team to support the smooth handoff of design assets and provide ongoing UI/UX support during implementation."
+            ]
+        }
+        
+       
+    ],
+    "FeatureProjects.Title": "Project that is Designed by me.",
+    "FeatureProjects.Label": "Featured Project",
+    "FeatureProjects.Projects": [
+        {
+            "Title": "Saral Apps",
+            "Description": "Saral Apps Pvt Ltd is a technology solutions provider specializing in custom digital experiences, with a strong focus on developing eLearning platforms. ",
+            "imgs": [
+                "assets/images/saraldiscount/saral1.png",
+                "assets/images/saraldiscount/saral2.png",
+                "assets/images/saraldiscount/saral4.png",
+                "assets/images/saraldiscount/saral5.png"
+            ],
+            "Technologies": [
+                "Figma",
+                "Angular",
+                "SCSS",
+                "TypeScript"
+            ],
+            "demoLink": "https://saralapps.com"
+        }, 
+        {
+            "Title": "Saral Discount",
+            "Description": "Saral discount is a platform designed to revolutionize how employees access exclusive discounts and perks. We connect companies directly with merchants, making it simple and convenient for employees to enjoy corporate discounts. ",
+            "imgs": [
+                "assets/images/saraldiscount/img01.png",
+                "assets/images/saraldiscount/img02.png",
+                "assets/images/saraldiscount/img03.png",
+                "assets/images/saraldiscount/img05.png",
+                "assets/images/saraldiscount/img06.png"
+            ],
+            "Technologies": [
+                "Figma",
+                "Angular",
+                "SCSS",
+                "TypeScript"
+            ],
+            "demoLink": "https://saraldiscount.com/"
+        }, 
+        {
+            "Title": "Lex Nepal",
+            "Description": "Lex Nepal Institute of Law is dedicated to building a strong foundation for your legal career. We go beyond exam preparation and focus on real-world legal training.",
+            "imgs": [
+                "assets/images/teamsandesh/lex1.png",
+                "assets/images/teamsandesh/lex3.png",
+                "assets/images/teamsandesh/lex4.png",
+                "assets/images/teamsandesh/lex5.png",
+                "assets/images/teamsandesh/lex6.png"
+            ],
+            "Technologies": [
+                "HTML",
+                "CSS",
+                "Figma",
+                "Javascript"
+            ],
+            "demoLink": "https://lexnepal.edu.np/"
+        },    
+        {
+            "Title": "Tejilo",
+            "Description": "Discover a world of knowledge with our E-Learning Platform! Explore interactive courses, engage with expert instructors, and unlock your potential from anywhere. Join us on a journey of seamless online learning",
+            "imgs": [
+                "assets/images/tejilo/img01.png",
+                 "assets/images/tejilo/img02.png",
+                  "assets/images/tejilo/img03.png",
+                   "assets/images/tejilo/img04.png",
+                    "assets/images/tejilo/img05.png"
+               
+            ],
+            "Technologies": [
+                "HTML",
+                "CSS",
+                "Figma",
+                "NodeJs"
+            ],
+            "demoLink": "https://tejilo.com/#/"
+        },    
+        {
+            "Title": "Aide Ascent",
+            "Description": "We build cutting-edge software solutions, empowering businesses to scale, innovate, and thrive in the digital era.",
+            "imgs": [
+                "assets/images/gurukul/aide1.png",
+                "assets/images/gurukul/aide2.png",
+                "assets/images/gurukul/aide3.png",
+                "assets/images/gurukul/aide4.png"
+            ],
+            "Technologies": [
+                "Figma"
+            ],
+            "demoLink": "https://www.aideascent.com/"
+        }
+    ],
+    "OtherProjects.Title": "More personal projects",
+    "OtherProjects.Projects": [
+        {
+            "Title": "Hotel Reservation",
+            "Description": "A web-based application designed to simplify the process of booking hotel rooms for users and managing reservations for hotel staff.",
+            "ghLink": "https://github.com/Sumanmaharjan12/Hotel_Reservation",
+           
+            "Technologies": [
+                "Figma",
+                "HTML",
+                "CSS",
+                "PHP",
+                "MySQL"
+            ]
+        },
+        {
+            "Title": "JobNepal",
+            "Description": "A job portal platform designed to connect job seekers with employers across Nepal. The platform allows users to create profiles, upload CVs, and apply for relevant job opportunities.",
+            "ghLink": "https://github.com/Sumanmaharjan12/Job-Portal",
+
+            "Technologies": [
+                "Angular",
+                "SCSS",
+                "TypeScript",
+                "ExpressJs",
+                "Mongodb"
+            ]
+        }
+    ],
+    "Contact.Pretitle": "What’s Next",
+    "Contact.Title": "Get in touch!",
+    "Contact.Content": "I will be happy to receive your contact if you want to talk about new opportunities. Write me, and I will reply as soon as I see your message. Simple one-page design that features a profile letter with basic information about a person.",
+    "Contact.Btn": "Say Hello"
+}
