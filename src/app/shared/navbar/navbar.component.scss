@@ -1,0 +1,174 @@
+/* ── NAVBAR BASE STYLE (Desktop First) ───────────────────────── */
+
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  max-width: 1400px;
+  margin: auto;
+  padding: 24px 60px;
+
+  backdrop-filter: blur(20px);
+  border-bottom: 1px solid var(--border);
+
+  animation: fadeDown 0.8s ease forwards;
+}
+.menu-toggle {
+    display: none;
+  }
+
+@keyframes fadeDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ── LOGO ───────────────────────────────────────────────────── */
+
+.nav-logo {
+  font-size: var(--Heading-size);
+  letter-spacing: 3px;
+  color: var(--nav-text-color);
+  text-decoration: none;
+  position: relative;
+}
+
+.nav-logo span {
+  color: var(--accent);
+}
+
+/* ── NAV LINKS ───────────────────────────────────────────────── */
+
+.nav-links {
+  display: flex;
+  gap: 40px;
+  list-style: none;
+}
+
+.nav-links a {
+  font-size: var(--Mobile-small);
+  font-weight: 600;
+  color: var(--Heading-color);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.nav-links a:hover {
+  color: var(--Secondary-color);
+}
+
+.nav-links a.active {
+  color: var(--Primary-color);
+  font-weight: 700;
+}
+
+/* ── CTA BUTTON ─────────────────────────────────────────────── */
+
+.nav-cta {
+  border: 1px solid var(--Primary-color);
+  padding: 10px 24px;
+  height: 55px;
+  border-radius: 10px;
+  font-weight: 700;
+  transition: all 0.2s ease;
+}
+
+.nav-cta:hover {
+  transform: translateY(-2px);
+  background-color: var(--Secondary-color);
+}
+
+.nav-cta::after {
+  display: none !important;
+}
+
+
+
+
+
+
+
+
+
+
+/* ───────────────────────────────────────── */
+/* ── TABLET (768px – 1024px) ────────────── */
+/* ───────────────────────────────────────── */
+
+@media (min-width: 768px) and (max-width: 1024px) {
+
+  nav {
+    padding: 20px 40px;
+  }
+
+  .nav-links {
+    gap: 24px;
+  }
+
+  .nav-links a {
+    font-size: 13px;
+    letter-spacing: 1.5px;
+  }
+
+  .nav-logo {
+    font-size: 22px;
+  }
+
+  .nav-cta {
+    padding: 8px 18px;
+    height: 48px;
+  }
+  
+  .menu-toggle {
+      display: none;
+      font-size: 26px;
+      cursor: pointer;
+  }
+}
+
+/* ───────────────────────────────────────── */
+/* ── MOBILE (0px – 767px) ───────────────── */
+/* ───────────────────────────────────────── */
+/* Mobile */
+@media (max-width: 767px) {
+    nav{
+        width: 95%;
+        padding: 24px 0px;
+        justify-content:center;
+        gap: 40px;
+    }
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 70px;
+    right: 0;
+    background: white;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 20px 0;
+    display: none;
+  }
+
+  .nav-links.open {
+    display: flex;
+  }
+}

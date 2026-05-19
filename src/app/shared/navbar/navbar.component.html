@@ -1,0 +1,15 @@
+<nav>
+  <a href="#home" class="nav-logo">SUMAN<span>.</span>MAHARJAN</a>
+
+  <!-- Mobile Menu Button -->
+  <div class="menu-toggle" (click)="toggleMenu()">
+    ☰
+  </div>
+
+  <ul class="nav-links" [class.open]="menuOpen">
+    <li><a [routerLink]="['/homepage']" routerLinkActive="active">Home</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#contact" class="nav-cta">Contact</a></li>
+  </ul>
+</nav>

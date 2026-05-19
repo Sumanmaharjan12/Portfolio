@@ -1,0 +1,414 @@
+<!-- CUSTOM CURSOR -->
+<div class="cursor-dot" #cursorDot></div>
+<div class="cursor-ring" #cursorRing></div>
+
+<!-- LOADER -->
+<div class="loader" [class.loader--hidden]="isLoaded">
+  <div class="loader__inner">
+    <div class="loader__name">
+      <span>S</span><span>U</span><span>M</span><span>A</span><span>N</span>
+    </div>
+    <div class="loader__bar-track">
+      <div class="loader__bar-fill" [style.width.%]="loaderProgress"></div>
+    </div>
+    <div class="loader__percent">{{ loaderProgress | number: "1.0-0" }}%</div>
+  </div>
+</div>
+
+<!-- MAIN CONTENT -->
+<div class="site-wrap" [class.site-wrap--visible]="showContent">
+  <app-navbar></app-navbar>
+
+  <!-- ═══════════════════════════════ HERO ═══════════════════════════════════ -->
+  <section id="hero" class="hero">
+    <div class="hero__content" *ngIf="showContent">
+      <div class="hero_eyebrow" @fadeSlideUp>
+        <span class="hero_status-dot"></span>
+        <span>UI/UX Designer · Available for Work</span>
+      </div>
+
+      <div>
+        <h1>Hello! My name is</h1>
+      </div>
+      <div class="banner-title">
+        <h2>Suman Maharjan</h2>
+        <h3>UI/UX Designer</h3>
+      </div>
+
+      <p class="hero-sub" @fadeSlideUp style="animation-delay: 0.7s">
+        I am a UI/UX Designer with 1 year of experience in designing
+        user-friendly, responsive, and visually appealing web and mobile
+        interfaces. I have worked on diverse projects including educational
+        websites and company websites using Figma. My designs focus on enhancing
+        user experience, ensuring mobile-first responsiveness, and building
+        interfaces that align with business goals. I specialize in creating
+        interactive prototypes, wireframes, and high-fidelity mockups to deliver
+        intuitive, modern design solutions.
+      </p>
+
+      <div class="hero_actions" @fadeSlideUp style="animation-delay: 0.9s">
+        <a
+          class="btn btn--primary"
+          (click)="scrollTo('#work')"
+          (mouseenter)="onHoverIn()"
+          (mouseleave)="onHoverOut()"
+        >
+          View Selected Work
+          <span class="btn__arrow">↓</span>
+        </a>
+        <a
+          class="btn btn--ghost"
+          (click)="scrollTo('#contact')"
+          (mouseenter)="onHoverIn()"
+          (mouseleave)="onHoverOut()"
+        >
+          Let's Talk
+        </a>
+      </div>
+    </div>
+
+    <!-- Floating badge -->
+    <div class="hero_badge">
+      <p>
+        <img src="https://media.giphy.com/media/Y4ak9Ki2GZCbJxAnJD/giphy.gif" />
+      </p>
+    </div>
+  </section>
+
+  <!-- Marquee -->
+  <div class="marquee">
+    <div class="marquee__track">
+      <span *ngFor="let _ of [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]">
+        <span class="marquee__item">User Research</span>
+        <span class="marquee__sep">✦</span>
+        <span class="marquee__item">UI Design</span>
+        <span class="marquee__sep">✦</span>
+        <span class="marquee__item">Prototyping</span>
+        <span class="marquee__sep">✦</span>
+        <span class="marquee__item">Design Systems</span>
+        <span class="marquee__sep">✦</span>
+        <span class="marquee__item">Frontend Developer</span>
+        <span class="marquee__sep">✦</span>
+      </span>
+    </div>
+  </div>
+
+  <!-- 
+   ═══════════════════════════════ ABOUT ════════════════════════════════════ -->
+  <section id="about" class="about">
+    <div class="container about__grid">
+      <div
+        class="about__left"
+        [class.about__left--visible]="isSectionVisible('about')"
+      >
+        <div class="section-label">About Me</div>
+        <h2 class="section-title">
+          Design is<br />how I<br /><span class="text-accent">think.</span>
+        </h2>
+       
+      </div>
+      <div
+        class="about__right"
+        [class.about__right--visible]="isSectionVisible('about')"
+      >
+        <p class="about__lead">
+          I'm Suman Maharjan, a UI/UX designer based in Kathmandu, Nepal, with
+          over 1 years of experience crafting digital products people genuinely
+          enjoy using.
+        </p>
+        <p class="about__body">
+          My process starts with curiosity — understanding users, business
+          goals, and constraints before a single pixel is placed. I believe
+          great design is invisible: it simply <em>works</em>, without friction,
+          without confusion, without a second thought.
+        </p>
+        <p class="about__body">
+          I've worked with startups and scale-ups across fintech, health, and
+          creator economy — shipping products that balance aesthetic precision
+          with measurable outcomes.
+        </p>
+        <div class="about__tools">
+          <div class="about__tool-label">Tools I Use</div>
+          <div class="about__tool-list">
+            <span
+              *ngFor="
+                let t of [
+                  'Figma',
+                  'Framer',
+                  'Principle',
+                  'Maze',
+                  'Notion',
+                  'FigJam',
+                  'Lottie',
+                  'Zeplin',
+                ]
+              "
+              class="about__tool-chip"
+              (mouseenter)="onHoverIn()"
+              (mouseleave)="onHoverOut()"
+            >
+              {{ t }}
+            </span>
+          </div>
+        </div>
+        <a
+          class="btn btn--primary"
+          href="#"
+          (mouseenter)="onHoverIn()"
+          (mouseleave)="onHoverOut()"
+        >
+          Download Resume →
+        </a>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- projects -->
+
+  <section class="projects" id="projects">
+  <div class="section-inner">
+    <div class="projects-header">
+      <div>
+        <div class="section-label reveal">My Work</div>
+        <h2 class="section-title reveal" style="margin-bottom:0">FEATURED<br>PROJECTS</h2>
+      </div>
+      <a href="#" class="all-project">All Projects →</a>
+    </div>
+    <div class="projects-grid">
+      <div class="project-card p1 reveal">
+        <div class="project-img">
+          <div class="project-img-inner">
+            <img src="../../../assets/images/hotelreservation.png" alt="image of my first project">
+          </div>
+          <div class="project-overlay">
+            <a href="#" class="project-overlay-btn">View Case Study →</a>
+          </div>
+        </div>
+        <div class="project-info">
+          <div class="project-tags">
+            <span class="project-tag">PHP</span>
+            <span class="project-tag">CSS</span>
+            <span class="project-tag">HTML</span>
+          </div>
+          <div class="project-name">Hotel Reservation</div>
+          <p class="project-desc">A smart hotel reservation platform with real-time room availability, interactive booking management, and seamless user experience for guests and administrators.</p>
+        </div>
+      </div>
+      <div class="project-card p2 reveal reveal-delay-1">
+        <div class="project-img">
+          <div class="project-img-inner">
+            <img src="../../../assets/images/jobportal.png" alt="image of my second project">
+          </div>
+          <div class="project-overlay">
+            <a href="#" class="project-overlay-btn">View Case Study →</a>
+          </div>
+        </div>
+        <div class="project-info">
+          <div class="project-tags">
+            <span class="project-tag">TypeScript</span>
+            <span class="project-tag">HTML</span>
+            <span class="project-tag">SCSS</span>
+            <span class="project-tag">Python</span>
+            <span class="project-tag">HTML</span>
+          </div>
+          <div class="project-name">Job Portal</div>
+          <p class="project-desc">A modern job portal platform that connects employers and job seekers through real-time job listings, streamlined application management, and an intuitive user interface.</p>
+        </div>
+      </div>
+      <div class="project-card p3 reveal reveal-delay-2">
+        <div class="project-img">
+          <div class="project-img-inner">
+            <img src="../../../assets/images/saralapps.png" alt="designed saralapps website">
+          </div>
+          <div class="project-overlay">
+            <a a href="assets/pdf/saralapps.pdf" target="_blank" class="project-overlay-btn">View Case Study →</a>
+          </div>
+        </div>
+        <div class="project-info">
+          <div class="project-tags">
+            <span class="project-tag">Angular</span>
+            <span class="project-tag">Figma</span>
+            <span class="project-tag">SCSS</span>
+          </div>
+          <div class="project-name">SaralApps Website</div>
+          <p class="project-desc"><a href="https://saralapps.com/">Saral Apps Pvt Ltd</a> is a technology solutions provider specializing in custom digital experiences, with a strong focus on developing eLearning platforms.</p>
+        </div>
+      </div>
+      <div class="project-card p4 reveal reveal-delay-3">
+        <div class="project-img">
+          <div class="project-img-inner">
+            <img src="../../../assets/images/kvi.webp" alt="">
+          </div>
+          <div class="project-overlay">
+            <a href="#" class="project-overlay-btn">View Case Study →</a>
+          </div>
+        </div>
+        <div class="project-info">
+          <div class="project-tags">
+            <span class="project-tag">Figma</span>
+            <span class="project-tag">UI/UX</span>
+          </div>
+          <div class="project-name">Kirtipur Valley Institute App</div>
+          <p class="project-desc"><a href="#">Kirtipur Valley Institute App</a>Designed the mobile app, creating an intuitive and user-friendly interface to enhance student engagement and streamline access to academic resources.</p>
+        </div>
+      </div>
+       <div class="project-card p4 reveal reveal-delay-3">
+        <div class="project-img">
+          <div class="project-img-inner">
+            <img src="../../../assets/images/meroastra.webp" alt="">
+          </div>
+          <div class="project-overlay">
+            <a href="#" class="project-overlay-btn">View Case Study →</a>
+          </div>
+        </div>
+        <div class="project-info">
+          <div class="project-tags">
+            <span class="project-tag">Figma</span>
+            <span class="project-tag">UI/UX</span>
+          </div>
+          <div class="project-name">Mero Astra Institute App</div>
+          <p class="project-desc"><a href="#">Mero Astra Institutee App</a>Designed the mobile app, creating an intuitive and user-friendly interface to enhance student engagement and streamline access to academic resources.</p>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+</section>
+
+
+
+
+
+   <!-- ═══════════════════════════════ SKILLS ════════════════════════════════════ --> 
+  <!-- <section id="skills" class="skills">
+    <div class="container">
+      <div
+        class="section-header"
+        [class.section-header--visible]="isSectionVisible('skills')"
+      >
+        <div class="section-label">Capabilities</div>
+        <h2 class="section-title">
+          What I<br /><span class="text-accent">Bring.</span>
+        </h2>
+      </div>
+      <div
+        class="skills__grid"
+        *ngIf="isSectionVisible('skills')"
+        @staggerCards
+      >
+        <div
+          class="skill-card"
+          *ngFor="let s of skills; trackBy: trackByIndex"
+          (mouseenter)="onHoverIn()"
+          (mouseleave)="onHoverOut()"
+        >
+          <div class="skill-card__icon">{{ s.icon }}</div>
+          <div class="skill-card__name">{{ s.name }}</div>
+          <p class="skill-card__desc">{{ s.desc }}</p>
+          <div class="skill-card__line"></div>
+        </div>
+      </div>
+    </div>
+  </section> -->
+
+  <!-- ═══════════════════════════════ PROCESS ══════════════════════════════════ -->
+  <section id="process" class="process">
+    <div class="container">
+      <div
+        class="section-header"
+        [class.section-header--visible]="isSectionVisible('process')"
+      >
+        <div class="section-label">My Process</div>
+        <h2 class="section-title">
+          How I<br /><span class="text-accent">Work.</span>
+        </h2>
+      </div>
+      <div class="process__steps">
+        <div
+          class="process__step"
+          *ngFor="
+            let step of processSteps;
+            let i = index;
+            trackBy: trackByIndex
+          "
+          [class.process__step--visible]="isSectionVisible('process')"
+          [style.transition-delay.ms]="i * 120"
+        >
+          <div class="process__step-num">{{ step.num }}</div>
+          <div class="process__step-body">
+            <div class="process__step-title">{{ step.title }}</div>
+            <p class="process__step-desc">{{ step.desc }}</p>
+          </div>
+          <div class="process__step-arrow" *ngIf="i < processSteps.length - 1">
+            →
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════ CONTACT ══════════════════════════════════ -->
+  <section id="contact" class="contact">
+    <div class="container">
+      <div
+        class="contact__inner"
+        [class.contact__inner--visible]="isSectionVisible('contact')"
+      >
+        <div class="section-label">Let's Connect</div>
+        <h2 class="contact__title">
+          Have a project<br />in mind<span class="text-accent">?</span>
+        </h2>
+        <p class="contact__sub">
+          I'm currently open to freelance projects and full-time opportunities.
+          Let's build something worth remembering.
+        </p>
+        <div class="contact__actions">
+          <a
+            class="btn btn--primary btn--large"
+            href="mailto:sumanmaharjan222@gmail.com"
+            (mouseenter)="onHoverIn()"
+            (mouseleave)="onHoverOut()"
+          >
+            suman&#64;maharjan.design
+          </a>
+        </div>
+        <div class="contact__socials">
+          <a
+            class="contact__social"
+            *ngFor="
+              let s of [
+                { label: 'Github', href: 'https://github.com/Sumanmaharjan12' },
+                { label: 'LinkedIn', href: '#' },
+                { label: 'Twitter', href: '#' },
+              ]
+            "
+            [href]="s.href"
+            (mouseenter)="onHoverIn()"
+            (mouseleave)="onHoverOut()"
+          >
+            {{ s.label }}
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="contact__big-text">SUMAN</div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__logo">Suman <span>Maharjan</span></div>
+      <div class="footer__copy">© 2026 · UI/UX Designer · Kathmandu, Nepal</div>
+      <div class="footer__back">
+        <a
+          (click)="scrollTo('#hero')"
+          (mouseenter)="onHoverIn()"
+          (mouseleave)="onHoverOut()"
+        >
+          Back to Top ↑
+        </a>
+      </div>
+    </div>
+  </footer>
+</div>
