@@ -294,41 +294,55 @@
   </div>
 </section>
 
-
-
-
-
-   <!-- ═══════════════════════════════ SKILLS ════════════════════════════════════ --> 
-  <!-- <section id="skills" class="skills">
-    <div class="container">
-      <div
-        class="section-header"
-        [class.section-header--visible]="isSectionVisible('skills')"
-      >
-        <div class="section-label">Capabilities</div>
-        <h2 class="section-title">
-          What I<br /><span class="text-accent">Bring.</span>
-        </h2>
+  <!-- ═══════════════════════════════ BLOG ══════════════════════════════════ -->
+  <section id="blog" class="projects" style="background: rgba(255,255,255,0.01); border-top: 1px solid rgba(255,255,255,0.05);">
+    <div class="section-inner">
+      <div class="projects-header">
+        <div>
+          <div class="section-label reveal">Insights & Thoughts</div>
+          <h2 class="section-title reveal" style="margin-bottom:0">LATEST<br>ARTICLES</h2>
+        </div>
       </div>
-      <div
-        class="skills__grid"
-        *ngIf="isSectionVisible('skills')"
-        @staggerCards
-      >
-        <div
-          class="skill-card"
-          *ngFor="let s of skills; trackBy: trackByIndex"
-          (mouseenter)="onHoverIn()"
-          (mouseleave)="onHoverOut()"
-        >
-          <div class="skill-card__icon">{{ s.icon }}</div>
-          <div class="skill-card__name">{{ s.name }}</div>
-          <p class="skill-card__desc">{{ s.desc }}</p>
-          <div class="skill-card__line"></div>
+      <div class="projects-grid">
+        <div class="project-card reveal">
+          <div class="project-img">
+            <div class="project-img-inner">
+              <img src="assets/images/hotelreservation.png" alt="AI in Frontend">
+            </div>
+            <div class="project-overlay">
+              <a [routerLink]="['/blog', 'the-future-of-ai-frontend']" class="project-overlay-btn">Read Article →</a>
+            </div>
+          </div>
+          <div class="project-info">
+            <div class="project-tags">
+              <span class="project-tag">Artificial Intelligence</span>
+              <span class="project-tag">5 min read</span>
+            </div>
+            <div class="project-name">The Future of AI in Frontend Development: Friend or Foe?</div>
+            <p class="project-desc">Exploring how generative AI tools and smart assistants are reshaping web development workflows, boosting productivity, and transforming how we build digital products.</p>
+          </div>
+        </div>
+        <div class="project-card reveal reveal-delay-1">
+          <div class="project-img">
+            <div class="project-img-inner">
+              <img src="assets/images/jobportal.png" alt="Design Systems with ML">
+            </div>
+            <div class="project-overlay">
+              <a [routerLink]="['/blog', 'design-systems-ai']" class="project-overlay-btn">Read Article →</a>
+            </div>
+          </div>
+          <div class="project-info">
+            <div class="project-tags">
+              <span class="project-tag">UI/UX & Engineering</span>
+              <span class="project-tag">4 min read</span>
+            </div>
+            <div class="project-name">Scaling Design Systems with Machine Learning Integration</div>
+            <p class="project-desc">How machine learning models and intelligent design tokens can bridge the gap between Figma design libraries and modern Angular/React component systems.</p>
+          </div>
         </div>
       </div>
     </div>
-  </section> -->
+  </section>
 
   <!-- ═══════════════════════════════ PROCESS ══════════════════════════════════ -->
   <section id="process" class="process">
