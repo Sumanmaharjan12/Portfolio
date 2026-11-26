@@ -1,4 +1,5 @@
 name: Deploy to GitHub Pages
+
 on:
   push:
     branches: [master]
@@ -18,13 +19,21 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+
       - uses: actions/setup-node@v4
         with:
           node-version: 18
           cache: npm
-      - run: npm ci
-      - run: npx ng build --configuration production --base-href /Portfolio/ --output-path dist/site
-      - run: cp dist/site/index.html dist/site/404.html
+
+      - name: Install dependencies
+        run: npm ci --legacy-peer-deps
+
+      - name: Build
+        run: npx ng build --configuration production --base-href /Portfolio/ --output-path dist/site
+
+      - name: Add 404 fallback
+        run: cp dist/site/index.html dist/site/404.html
+
       - uses: actions/upload-pages-artifact@v3
         with:
           path: dist/site
