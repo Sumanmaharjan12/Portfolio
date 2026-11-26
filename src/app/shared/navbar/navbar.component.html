@@ -8,9 +8,10 @@
 
   <ul class="nav-links" [class.open]="menuOpen">
     <li><a [routerLink]="['/homepage']" routerLinkActive="active">Home</a></li>
-    <li><a routerLink="/homepage" fragment="about">About</a></li>
-    <li><a routerLink="/homepage" fragment="projects">Projects</a></li>
-    <li><a routerLink="/homepage" fragment="blog">Blog</a></li>
-    <li><a routerLink="/homepage" fragment="contact" class="nav-cta">Contact</a></li>
+    <li><a routerLink="/homepage" fragment="about" [queryParamsHandling]="'preserve'">About</a></li>
+    <li><a routerLink="/homepage" fragment="projects" [queryParamsHandling]="'preserve'">Projects</a></li>
+    <li><a routerLink="/homepage" fragment="blog" [queryParamsHandling]="'preserve'">Blog</a></li>
+    <li><a routerLink="/homepage" fragment="contact" [queryParamsHandling]="'preserve'" class="nav-cta">Contact</a></li>
   </ul>
 </nav>
+
